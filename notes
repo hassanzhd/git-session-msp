@@ -1,0 +1,50 @@
+WHAT IS GIT: 
+GIT is a distributed version control system
+
+- control system means git is a content tracker and can see if changes are made
+- version control system means git maintains a history of all changes that were made
+- distributed version control system means git has a implementation of both remote repository as well as a local repository 
+
+WHY IS IT NEEDED: 
+GIT is needed because in real life projects multiple developers are working in parallel that can cause code conflicts. This can be resolved by reverting to old an version if needed.
+
+CONFIGURATION: 
+to set username: git config --global user.name "username"
+to set email: git config --global user.email "email"
+
+GIT WORKFLOW: 
+local repo consists of three trees maintained by git:
+
+- WORKING DIRECTORY: contains all actual files
+- STAGING AREA: contains all the files that are being tracked by GIT
+- HEAD / local repo: contains all the files that are grouped together after being committed from the staging area
+
+INITIALIZING ADDING AND CHANGING:
+- initialize a GIT repo: git init
+- add files to staging area: git add FILE_NAME
+- to get status of files in current working directory: git status
+- to ignore files (tracking): add names or extensions in .gitignore
+- removing files: git rm FILE_NAME removes a file from staging area, tracking as well as working directory however if a file is to be removed from staging area and not working directory (some folder/ file accidently added) then the flag --cached can be used => git rm --cached FILE_NAME
+
+REDOING THINGS:
+- If there is a file that was accidently not added or there was something you forgot and realized after you commited then that can changed by using: git commit --amend
+what this command does is replace the last commit with the commit that you will do next.
+
+- unstaging a staged file: a staged can be unstaged using: git restore --staged FILE_NAME
+- unmodifying a modified file: git restore FILE_NAME
+- getting a file from previous commit: git checkout HASH FILE_NAME
+
+SHOWING/ ADDING REMOTE REPOSITORIES: 
+- show all remotes: git remote -v
+- add: git remote add NAME URL
+
+BRANCHES: 
+create: git branch NAME
+switch: git checkout NAME
+	or
+git checkout -b NAME (combination of both create and switch)
+git branch -d NAME (deletes branch)
+git push origin branch (pushes to remote repo (used in pull requests))
+git push origin --delete branch (deletes remote branch from remote repo)
+
+PULL-REQUESTS

@@ -1,0 +1,46 @@
+GIT CHEAT SHEET:
+
+1. Initialization: git init
+
+2. Adding files: git add FILE/FOLDER or git add . (all)
+
+3. Status of staging area: git status
+
+4. Removing of files completely: git rm FILE/FOLDER 
+
+5. Removing of files from git tracking but not completely: git rm --cached FILE/FOLDER
+
+6. Committing files from staging area to local repository: git commit -m "message"
+
+7. Showing commit detail: git show HASH (first four letters of commit hash)
+
+8. Resetting commits: git reset HASH (here hash is the commit that you want to go backwards) 
+[WARNING: Any forward commits will be deleted after reset]
+
+9. Revert commits: git revert HASH (here hash is the commit that you want to go backwards)
+[NOTE: a copy of previous commit is made forward, no commits will be deleted]
+
+10. Getting a file from a previous commit: git checkout HASH FILE
+
+11. Unstaging a file: git restore --staged FILE/FOLDER
+
+12. Unmodify a modified file: git restore FILE/FOLDER
+
+13. Create branch: git branch BRANCH_NAME
+
+14. Switch branch: git checkout BRANCH_NAME	
+
+15. Create and switch branches: git checkout -b BRANCH_NAME
+
+16. See all remote repos: git remote -v
+ 
+17. Add remote repos: git remote add ALIAS_NAME URL
+
+18. Pushing: git push ALIAS_NAME BRANCH_NAME
+
+19. Pulling: git pull ALIAS_NAME BRANCH_NAME
+
+20. Adding a remote branch: git push ALIAS_NAME BRANCH_NAME
+
+21. Deleting a remote branch: git push ALIAS_NAME --delete BRANCH_NAME
+
